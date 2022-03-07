@@ -21,7 +21,10 @@ try:
 except ImportError:
     exit("This script requires the pillow module\nInstall with: sudo pip install pillow")
 
-import unicornhathd as unicorn
+try:
+    import unicornhathd as unicorn
+except ImportError:
+    from unicorn_hat_sim import unicornhathd as unicorn
 
 print("""
   _    _       _                        _    _       _     _    _ _____
