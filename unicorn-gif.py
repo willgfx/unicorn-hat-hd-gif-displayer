@@ -14,6 +14,7 @@ Press Ctrl+C to exit!
 
 import signal
 import time
+from sys import argv
 from sys import exit
 
 try:
@@ -28,15 +29,22 @@ except ImportError:
 
 print("\nUnicorn HAT HD: GIF Displayer\n")
 
+gif = argv[1]
+if gif[-4:] != ".gif":
+    gif += ".gif"
+
+try:
+    brightness = float(argv[2])
+except IndexError:
+    brightness = (0.2)
+
 unicorn.rotation(0)
-unicorn.brightness(0.2)
+unicorn.brightness(brightness)
 
 width, height = unicorn.get_shape()
 
-print("Reading and processing frames...")
-
-img = Image.open("bow.gif")
-
+print(f"Reading and processing frames from {gif}...")
+img = Image.open(gif)
 frames = [frame.copy().convert("RGBA") for frame in ImageSequence.Iterator(img)]
 
 print("Playing animation...\nPress Ctrl+C to stop.")
