@@ -26,7 +26,7 @@ try:
 except ImportError:
     from unicorn_hat_sim import unicornhathd as unicorn
 
-print("\nUnicorn HAT HD: Gif Displayer\n")
+print("\nUnicorn HAT HD: GIF Displayer\n")
 
 unicorn.rotation(0)
 unicorn.brightness(0.2)
