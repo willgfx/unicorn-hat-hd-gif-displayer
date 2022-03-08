@@ -44,8 +44,11 @@ unicorn.brightness(brightness)
 width, height = unicorn.get_shape()
 
 print(f"Reading and processing frames from {gif}...")
-img = Image.open(gif)
-frames = [frame.copy().convert("RGBA") for frame in ImageSequence.Iterator(img)]
+try:
+    img = Image.open(gif)
+    frames = [frame.copy().convert("RGBA") for frame in ImageSequence.Iterator(img)]
+except FireNotFoundError:
+    exit(f"{gif} not found.")
 
 print("Playing animation...\nPress Ctrl+C to stop.")
 
