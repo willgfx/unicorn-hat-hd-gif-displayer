@@ -4,7 +4,7 @@
 
 This piece of software was made for the fantastic Unicorn Hat HD by Pimoroni: https://shop.pimoroni.com/products/unicorn-hat-hd
 
-This script is based of: https://github.com/pimoroni/unicorn-hat-hd/blob/1dda39a1074d7676fc0c5f9a44037748d32219db/examples/show-png.py which was made by the Pimoroni Team
+Based on Pimoroni's show-png.py example: https://github.com/pimoroni/unicorn-hat-hd/blob/1dda39a1074d7676fc0c5f9a44037748d32219db/examples/show-png.py
 
 Licensed under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License. (https://creativecommons.org/licenses/by-nc-sa/3.0/)
 
