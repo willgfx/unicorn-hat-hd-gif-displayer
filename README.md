@@ -8,11 +8,12 @@ Based on Pimoroni's show-png.py example: https://github.com/pimoroni/unicorn-hat
 ./unicorn-gif.py file [brightness]
 ```
 The script automatically assumes a ".gif" extension for the filename, so it is optional.
-Brightness is a float value from 0-1.
+
+Brightness is an optional float value from 0-1.
 
 ### Usage examples
 ```
 ./unicorn-gif.py foo.gif
-./unicorn-gif.py bar.gif 0.5
 ./unicorn-gif.py foo 0.25
+./unicorn-gif.py bar
 ```
