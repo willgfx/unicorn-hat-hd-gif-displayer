@@ -29,9 +29,17 @@ except ImportError:
 
 print("\nUnicorn HAT HD: GIF Displayer\n")
 
-gif = argv[1]
-if gif[-4:] != ".gif":
-    gif += ".gif"
+try:
+    gif = argv[1]
+    if gif[-4:] != ".gif":
+        gif += ".gif"
+except IndexError:
+    name = argv[0]
+    exit(f"""usage: {name} file [brightness]
+
+   ex: {name} foo.gif
+       {name} bar.gif 0.5
+       {name} foo 0.25""")
 
 try:
     brightness = float(argv[2])
